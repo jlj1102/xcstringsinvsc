@@ -3,6 +3,7 @@
   "displayName": "XCStrings",
   "description": "Enables color support for xcstrings",
   "version": "0.0.1",
+  "publisher": "jlj1102",
   "engines": {
     "vscode": "^1.109.0"
   },
