@@ -12,7 +12,7 @@
   "contributes": {
     "languages": [{
       "id": "xcstrings",
-      "aliases": ["XCStrings", "xcstrings"],
+      "aliases": ["Xcode Modern String Catalog Format", "xcstrings"],
       "extensions": [".xcstrings"],
       "configuration": "./language-configuration.json"
     }],
