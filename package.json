@@ -27,5 +27,8 @@
         "url": "./schemas/xcstrings.schema.json"
       }
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jlj1102/xcstringsinvsc.git"
 }
