@@ -1,4 +1,4 @@
-# xcstrings by jlj1102
+# xcstrings in Vscode
 
 Added xcstring highlight and auto-fill support for xcode.
 This is the alpha version and idk if I will continue to maintain it.
