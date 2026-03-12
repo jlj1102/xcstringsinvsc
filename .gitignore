@@ -47,3 +47,6 @@ pids
 
 # AI workspace
 .claude/
+
+# bundled package
+*.vsix
