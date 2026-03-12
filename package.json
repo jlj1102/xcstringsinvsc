@@ -85,7 +85,7 @@
     "url": "https://github.com/jlj1102/xcstringsinvsc.git"
   },
   "devDependencies": {
-    "@types/vscode": "^1.110.0",
+    "@types/vscode": "^1.109.0",
     "typescript": "^5.9.3"
   }
 }
