@@ -2,7 +2,7 @@
   "name": "xcstrings",
   "displayName": "XCStrings",
   "description": "Enables color support for xcstrings",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "jlj1102",
   "engines": {
     "vscode": "^1.109.0"
@@ -10,27 +10,82 @@
   "categories": [
     "Programming Languages"
   ],
+  "main": "./dist/extension.js",
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile"
+  },
   "contributes": {
-    "languages": [{
-      "id": "xcstrings",
-      "aliases": ["Xcode Modern String Catalog Format", "xcstrings"],
-      "extensions": [".xcstrings"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "xcstrings",
-      "scopeName": "text.xcstrings",
-      "path": "./syntaxes/xcstrings.tmLanguage.json"
-    }],
+    "languages": [
+      {
+        "id": "xcstrings",
+        "aliases": [
+          "Xcode Modern String Catalog Format",
+          "xcstrings"
+        ],
+        "extensions": [
+          ".xcstrings"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "xcstrings",
+        "scopeName": "source.xcstrings",
+        "path": "./syntaxes/xcstrings.tmLanguage.json"
+      }
+    ],
     "jsonValidation": [
       {
         "fileMatch": "*.xcstrings",
         "url": "./schemas/xcstrings.schema.json"
       }
-    ]
+    ],
+    "configurationDefaults": {
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "scope": "entity.name.tag.xcstrings",
+            "settings": {
+              "foreground": "#9CDCFE"
+            }
+          },
+          {
+            "scope": "variable.other.xcstrings-entry",
+            "settings": {
+              "foreground": "#c7b3ff"
+            }
+          },
+          {
+            "scope": "constant.language.state.xcstrings",
+            "settings": {
+              "foreground": "#FFD700"
+            }
+          },
+          {
+            "scope": "string.quoted.double.xcstrings-value",
+            "settings": {
+              "foreground": "#FFD700"
+            }
+          },
+          {
+            "scope": "support.constant.locale.xcstrings",
+            "settings": {
+              "foreground": "#FFD700"
+            }
+          }
+        ]
+      }
+    }
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jlj1102/xcstringsinvsc.git"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.110.0",
+    "typescript": "^5.9.3"
   }
 }
